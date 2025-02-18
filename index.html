@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Alphanexs</title>
+    <link rel="icon" type="image-png" href="logo.png"/>
+    <style>
+       /* General Styles */
+       * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background: rgb(11,11,21);
+    background: radial-gradient(circle, rgba(11,11,21,1) 0%, rgba(0,0,0,1) 93%);
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+/*////////////// Header page /main page   ///////////////////////////////*/
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.logo-container {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+}
+
+.logo-img {
+    width: 95px; 
+    height: auto; 
+    margin-right: 12px;
+    margin-top: 8px;
+}
+
+.header-heading-1 {
+    font-size: 32px;
+    color: #bb86fc;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0; 
+    margin-left: -28px;
+    margin-top: 16px;
+}
+
+.headin-g {
+    color: #e0e0e0; 
+}
+.head-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgb(27,13,41);
+    background: radial-gradient(circle, rgba(27,13,41,1) 10%, rgba(0,0,0,1) 65%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-heading-1 {
+    font-size: 36px;
+    color: #bb86fc;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.header-nav {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    margin-right: 72px;
+}
+
+.header-nav li a {
+    font-size: 18px;
+    font-weight: 600;
+    color: #e0e0e0;
+    transition: color 0.3s, transform 0.3s;
+    position: relative;
+}
+
+.header-nav li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #bb86fc;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s;
+}
+
+.header-nav li a:hover::after {
+    width: 100%;
+}
+
+.header-nav li a:hover {
+    color: #bb86fc;
+    transform: translateY(-3px);
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #bb86fc;
+}
+.head-part-2 {
+    padding: 100px 40px;
+    text-align: center;
+   
+    background: rgb(27,13,41);
+    background: radial-gradient(circle, rgba(27,13,41,1) 10%, rgba(0,0,0,1) 65%);
+}
+
+.header-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 60px;
+}
+
+.header-text-box {
+    max-width: 600px;
+    text-align: left;
+}
+
+.h-p-1 {
+    font-size: 20px;
+    color: #bb86fc;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.h-name {
+    font-size: 48px;
+    color: #e0e0e0;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.n-1 {
+    color: #bb86fc;
+}
+
+.head-p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.head-icon-p {
+    margin-top: 20px;
+}
+
+.h-icon {
+    font-size: 24px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+    
+}
+
+.h-icon:hover {
+    color: #ced4da;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.head-link, .head-link-2 {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.head-link {
+    background-color: #bb86fc;
+    color: #1e1e1e;
+    border: 2px solid #bb86fc;
+}
+
+.head-link-2 {
+    background-color: transparent;
+    color: #bb86fc;
+    border: 2px solid #bb86fc;
+}
+
+.head-link:hover, .head-link-2:hover {
+    background-color: #9a67ea;
+    color: #1e1e1e;
+    transform: translateY(-4px);
+}
+
+.header-image-box {
+    max-width: 500px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-h {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+    .header-nav {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        background-color: #252526;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-nav.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .header-body {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-text-box {
+        text-align: center;
+    }
+
+    .header-image-box {
+        display: none;
+    }
+
+    .h-name {
+        font-size: 36px;
+    }
+
+    .head-p {
+        font-size: 16px;
+    }
+
+    .header-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .head-link, .head-link-2 {
+        width: 100%;
+    }
+}
+.head-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgb(27,13,41);
+    background: radial-gradient(circle, rgba(27,13,41,1) 10%, rgba(0,0,0,1) 65%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-nav {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    margin-right: 72px;
+}
+
+.header-nav li a {
+    font-size: 18px;
+    font-weight: 600;
+    color: #e0e0e0;
+    transition: color 0.3s, transform 0.3s;
+    position: relative;
+}
+
+.header-nav li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #bb86fc;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s;
+}
+
+.header-nav li a:hover::after {
+    width: 100%;
+}
+
+.header-nav li a:hover {
+    color: #bb86fc;
+    transform: translateY(-3px);
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #bb86fc;
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+    .header-nav {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        background-color: #252526;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-nav.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .logo-container {
+        gap: 0px;
+        margin-top: 6px;
+    }
+
+    .logo-img {
+        width: 80px; 
+    }
+
+    .header-heading-1 {
+        font-size: 28px;
+    }
+}
+
+/*/////////////////// About Me Section ///////////////////////////*/
+.section-about {
+    padding: 80px 40px;
+    text-align: center;
+    background: rgb(27,13,41);
+    background: radial-gradient(circle, rgba(27,13,41,1) 10%, rgba(0,0,0,1) 65%);
+}
+
+.about-p {
+    font-size: 32px;
+    color: #bb86fc;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.h-1 {
+    color: #e0e0e0;
+}
+
+.about-s {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    background: rgb(0,0,0);
+background: radial-gradient(circle, rgba(0,0,0,1) 10%, rgba(27,13,41,1) 96%);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.about-image {
+    max-width: 400px;
+    flex: 1;
+}
+
+.about-i {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
+}
+
+.about-heading {
+    font-size: 36px;
+    color: #e0e0e0;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.about-s-h {
+    font-size: 18px;
+    color: #bb86fc;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.about-paragraph {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #a0a0a0;
+    margin-bottom: 20px;
+}
+
+.about-mail {
+    font-size: 18px;
+    color: #bb86fc;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.about-link {
+    font-size: 16px;
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.about-link:hover {
+    color: #bb86fc;
+}
+
+.about-h {
+    font-size: 24px;
+    color: #bb86fc;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.about-p-2 {
+    font-size: 16px;
+    color: #a0a0a0;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-s {
+        flex-direction: column;
+        padding: 30px;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .about-image {
+        max-width: 100%;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .about-heading {
+        font-size: 28px;
+    }
+
+    .about-s-h {
+        font-size: 16px;
+    }
+
+    .about-paragraph {
+        font-size: 14px;
+    }
+
+    .about-mail {
+        font-size: 16px;
+    }
+
+    .about-link {
+        font-size: 14px;
+    }
+
+    .about-h {
+        font-size: 20px;
+    }
+
+    .about-p-2 {
+        font-size: 14px;
+    }
+}
+
+/*///////////////////// Services Section ////////////////////////////////////*/
+.Services-s {
+    padding: 80px 40px;
+    text-align: center;
+    background: rgb(27,13,41);
+    background: radial-gradient(circle, rgba(27,13,41,1) 10%, rgba(0,0,0,1) 65%);
+}
+
+.about-p {
+    font-size: 32px;
+    color: #bb86fc;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.h-1 {
+    color: #e0e0e0;
+}
+
+.section-services {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.box-1, .box-2, .box-3 {
+    background: rgb(0,0,0);
+background: radial-gradient(circle, rgba(0,0,0,1) 10%, rgba(13,2,23,1) 96%);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    margin-top: 32px;
+}
+
+.box-1:hover, .box-2:hover, .box-3:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.icon-s {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+    color: #bb86fc;
+}
+
+.b-t-1 {
+    font-size: 24px;
+    color: #e0e0e0;
+    margin-bottom: 15px;
+}
+
+.b-p-1 {
+    font-size: 16px;
+    color: #a0a0a0;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .section-services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box-1, .box-2, .box-3 {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .about-p {
+        font-size: 28px;
+    }
+
+    .b-t-1 {
+        font-size: 22px;
+    }
+
+    .b-p-1 {
+        font-size: 14px;
+    }
+}
+/*//////////////// Contact Section Styles //////////////////////////*/
+.contact-section {
+    padding: 80px 40px;
+    background: rgb(27,13,41);
+    background: radial-gradient(circle, rgba(27,13,41,1) 10%, rgba(0,0,0,1) 65%);
+    text-align: center;
+}
+
+.about-p-c {
+    font-size: 32px;
+    color: #bb86fc;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.h-1 {
+    color: #e0e0e0;
+}
+
+.contact-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 60px;
+    padding: 40px;
+    background: rgb(8,16,45);
+    background: linear-gradient(90deg, rgba(8,16,45,1) 0%, rgba(21,8,8,1) 100%);
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-box-2 {
+    text-align: left;
+    flex: 1;
+}
+
+.h-b-1 {
+    font-size: 42px;
+    color: #e0e0e0;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.contact-subtext {
+    font-size: 18px;
+    color: #a0a0a0;
+    line-height: 1.6;
+}
+
+.contact-box-1 {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.head-link-1, .head-link-3 {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.head-link-1 {
+    background-color: #bb86fc;
+    color: #1e1e1e;
+    border: 2px solid #bb86fc;
+}
+
+.head-link-3 {
+    background-color: transparent;
+    color: #bb86fc;
+    border: 2px solid #bb86fc;
+}
+
+.head-link-1:hover {
+    background-color: #9a67ea;
+    border-color: #9a67ea;
+    color: #1e1e1e;
+}
+
+.head-link-3:hover {
+    background-color: #bb86fc;
+    color: #1e1e1e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-box {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding: 30px;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .contact-box-2 {
+        text-align: center;
+    }
+
+    .h-b-1 {
+        font-size: 36px;
+    }
+
+    .contact-subtext {
+        font-size: 16px;
+    }
+
+    .contact-box-1 {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .head-link-1, .head-link-3 {
+        width: 100%;
+        margin-top: 22px;
+    }
+}
+
+/*/////////////// Project Display Card Section /////////////////////////*/
+.project-section {
+    padding: 80px 40px;
+    background: rgb(27,13,41);
+    background: radial-gradient(circle, rgba(27,13,41,1) 10%, rgba(0,0,0,1) 65%);
+    text-align: center;
+}
+
+.about-p {
+    font-size: 32px;
+    color: #bb86fc;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.h-1 {
+    color: #e0e0e0;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: rgb(8,16,45);
+background: linear-gradient(90deg, rgba(8,16,45,1) 0%, rgba(21,8,8,1) 100%);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.project-title {
+    font-size: 24px;
+    color: #e0e0e0;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    font-size: 16px;
+    color: #a0a0a0;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #bb86fc;
+    color: #1e1e1e;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.project-link:hover {
+    background-color: #9a67ea;
+    transform: translateY(-4px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-p {
+        font-size: 28px;
+    }
+
+    .project-title {
+        font-size: 22px;
+    }
+
+    .project-description {
+        font-size: 14px;
+    }
+}
+/*/////////////////// Client Review Section /////////////////////////////////*/
+.review-section {
+    padding: 80px 40px;
+    background: rgb(27,13,41);
+    background: radial-gradient(circle, rgba(27,13,41,1) 10%, rgba(0,0,0,1) 65%);
+    text-align: center;
+}
+
+.about-p {
+    font-size: 32px;
+    color: #bb86fc;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.h-1 {
+    color: #e0e0e0;
+}
+
+.review-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.review-card {
+    background: rgb(8,16,45);
+background: linear-gradient(90deg, rgba(8,16,45,1) 0%, rgba(21,8,8,1) 100%);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.review-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.review-content {
+    text-align: center;
+}
+
+.review-name {
+    font-size: 24px;
+    color: #e0e0e0;
+    margin-bottom: 10px;
+}
+
+.review-stars {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.review-stars ion-icon {
+    font-size: 24px;
+    color: #ffd700; 
+}
+
+.review-text {
+    font-size: 16px;
+    color: #a0a0a0;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .review-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-p {
+        font-size: 28px;
+    }
+
+    .review-name {
+        font-size: 22px;
+    }
+
+    .review-text {
+        font-size: 14px;
+    }
+}
+
+
+/*///////////////////// team  Section ////////////////////////////*/
+
+.team-section {
+    padding: 80px 40px;
+    background: rgb(27,13,41);
+    background: radial-gradient(circle, rgba(27,13,41,1) 10%, rgba(0,0,0,1) 65%);
+    text-align: center;
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 430px;
+    margin: 0 auto;
+}
+
+.team-card {
+    background: rgb(8,16,45);
+    background: linear-gradient(90deg, rgba(8,16,45,1) 0%, rgba(21,8,8,1) 100%);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.team-image img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+
+.team-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.team-name {
+    font-size: 24px;
+    color: #e0e0e0;
+    margin-bottom: 10px;
+}
+
+.team-role {
+    font-size: 16px;
+    color: #a0a0a0;
+    margin-bottom: 20px;
+}
+
+.team-socials {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #bb86fc;
+    color: #1e1e1e;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-link:hover {
+    background-color: #9a67ea;
+    transform: translateY(-4px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .team-container {
+        grid-template-columns: 1fr;
+    }
+
+    .team-name {
+        font-size: 22px;
+    }
+
+    .team-role {
+        font-size: 14px;
+    }
+
+    .social-link {
+        font-size: 12px;
+    }
+}
+
+
+/*///////////////////// Footer Section ////////////////////////////*/
+.section-footer {
+    padding: 80px 40px;
+    background: rgb(27,13,41);
+    background: radial-gradient(circle, rgba(27,13,41,1) 10%, rgba(0,0,0,1) 65%);
+    color: #e0e0e0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-heading-1-f {
+    font-size: 28px;
+    color: #bb86fc;
+    margin-bottom: 20px;
+}
+
+.headin-g-f {
+    color: #e0e0e0;
+}
+
+.head-icon-p-2 {
+    margin-bottom: 20px;
+}
+
+.h-icon {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #bb86fc;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.h-icon:hover {
+    color: #9a67ea;
+}
+
+.footer-text {
+    font-size: 16px;
+    color: #a0a0a0;
+    line-height: 1.6;
+}
+
+.footer-h, .footer-h-2 {
+    font-size: 20px;
+    color: #bb86fc;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.footer-t {
+    font-size: 16px;
+    color: #a0a0a0;
+    line-height: 1.8;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.footer-t-2 {
+    font-size: 16px;
+    color: #a0a0a0;
+    line-height: 1.8;
+    text-decoration: none;
+    display: block;
+    margin-bottom: -5px;
+}
+
+.footer-t-2:hover {
+    color: #bb86fc;
+}
+
+.footer-icon {
+    width: 24px;
+    height: 24px;
+    color: #bb86fc;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.icon-t {
+    display: inline-block;
+    font-size: 16px;
+    color: #a0a0a0;
+    vertical-align: middle;
+    margin-bottom: 20px;
+    margin-top: 24px;
+}
+@media (max-width: 768px) {
+    .Services-footer {
+        display: none;
+    }
+    .footer-grid > div:nth-child(3) {
+        display: none;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .header-heading-1 {
+        font-size: 24px;
+    }
+
+    .footer-h, .footer-h-2 {
+        font-size: 18px;
+    }
+
+    .footer-t, .footer-t-2 {
+        font-size: 14px;
+    }
+
+    .icon-t {
+        font-size: 14px;
+        margin-top: 16px;
+    }
+}
+
+.all-rights {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background: rgb(8,16,45);
+    background: radial-gradient(circle, rgba(8,16,45,1) 1%, rgba(21,8,8,1) 98%);
+}
+.rights-text {
+    font-size: 14px;
+    color: #a0a0a0;
+    margin: 0;
+}
+    </style>
+</head>
+<body>
+    <div id="my-home">
+        <header class="head-1">
+            <div class="logo-container">
+                <img src="logo.png" alt="Logo Image" class="logo-img">
+                <h1 class="header-heading-1">Alpha<span class="headin-g">nexs</span></h1>
+            </div>
+            <div class="hamburger" onclick="toggleNav()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="header-nav" id="headerNav">
+                <li><a class="nav-link" href="#my-home">Home</a></li>
+                <li><a class="nav-link" href="#about-me">About</a></li>
+                <li><a class="nav-link" href="#my-contact">Contact</a></li>
+                <li><a class="nav-link" href="#my-team">Team</a></li>
+                <li><a class="nav-link" href="#my-services">Services</a></li>
+            </ul>
+        </header>
+    
+        <section class="head-part-2">
+            <div class="header-body">
+                <div class="header-text-box">
+                    <p class="h-p-1">Hello There! <br></p>
+                    <span class="h-name"><span class="n-1">We are Alphanexs,</span><br>Your Technology Partner.</span>
+                    <p class="head-p">Welcome to our digital space! We are a passionate team of developers with a love for creating user-friendly apps and websites. Our goal is to transform ideas into seamless, engaging, and impactful digital experiences.</p>
+    
+                    <div class="header-buttons">
+                        <a class="head-link" href="#my-contact">Contact Us</a>
+                        <a class="head-link-2" href="#">Get a Quote</a>
+                    </div>
+                </div>
+                <div class="header-image-box">
+                    <figure class="header-image">
+                        <img class="image-h" src="3266031.webp" alt="Profile Image">
+                    </figure>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div id="about-me">
+        <section class="section-about">
+            <p class="about-p"><span class="h-1">About</span> US</p>
+            <div class="about-s container-1200 grid-2colon-2">
+                <div class="about-image">
+                    <figure class="about-image-s">
+                        <img class="about-i" src="20b78fc003fb9931c9341d4f62761bca-removebg-preview.png" alt="About Image">
+                    </figure>
+                </div>
+                <div class="about-text">
+                    <h2 class="about-heading">Alphanexs</h2>
+                    <p class="about-s-h">Your Digital Solutions Partner</p>
+                    <p class="about-paragraph">
+                        We are on a mission to turn ideas into engaging digital experiences and innovative solutions. Driven by passion and expertise, we transform concepts into impactful web and mobile applications. What started as a vision has grown into a commitment to excellence in app development and cloud solutions.
+                    </p>
+                    <p class="about-mail">📧 Email Us</p>
+                    <a class="about-link" href="mailto:alphanexs2@gmail.com">alphanexs2@gmail.com</a>
+                    <h3 class="about-h">Our Expertise:</h3>
+                    <p class="about-p-2">App Development | Web Development | AWS | React | React Native | Firebase | Node.js</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div id="my-services">
+        <section class="Services-s">
+            <p class="about-p"><span class="h-1">Services</span></p>
+            <div class="section-services container grid-3colon">
+                <div class="box-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-s">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
+                    </svg>
+                    <h2 class="b-t-1">UI/UX Design</h2>
+                    <p class="b-p-1">We design visually appealing and user-friendly interfaces that go beyond expectations, delivering a seamless and engaging experience.</p>
+                </div>
+                <div class="box-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-s">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                    </svg>
+                    <h2 class="b-t-1">App Development</h2>
+                    <p class="b-p-1">We build scalable, high-performance apps—from simple tools to complex platforms—ensuring efficient, optimized code.</p>
+                </div>
+                <div class="box-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-s">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z" />
+                    </svg>
+                    <h2 class="b-t-1">Web Development</h2>
+                    <p class="b-p-1">We create responsive websites compatible with all devices and browsers, providing a seamless experience and boosting engagement.</p>
+                </div>
+            </div>
+            <div class="section-services container grid-3colon">
+                <div class="box-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-s">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 0 0 4.5 4.5H18a3.75 3.75 0 0 0 1.332-7.257 3 3 0 0 0-3.758-3.848 5.25 5.25 0 0 0-10.233 2.33A4.502 4.502 0 0 0 2.25 15Z" />
+                    </svg>
+                    <h2 class="b-t-1">AWS Cloud Solution</h2>
+                    <p class="b-p-1">We offer secure, scalable cloud solutions using AWS to enhance your business operations and ensure reliable performance.</p>
+                </div>
+                <div class="box-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-s">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061A1.125 1.125 0 0 1 21 8.689v8.122ZM11.25 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061a1.125 1.125 0 0 1 1.683.977v8.122Z" />
+                    </svg>
+                    <h2 class="b-t-1">Video Editing</h2>
+                    <p class="b-p-1">We produce high-quality, captivating video content that tells your story and connects with your audience effectively.</p>
+                </div>
+                <div class="box-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-s">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
+                    </svg>
+                    <h2 class="b-t-1">Digital Marketing</h2>
+                    <p class="b-p-1">We drive results through data-driven digital marketing strategies, helping your business grow and reach its target audience.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+ <div id="my-projects">
+    <section class="project-section">
+        <p class="about-p"><span class="h-1">Projects</span></p>
+        <div class="project-container container">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="f28e2a8760f4c6b7c709270db21bdcd4.jpg" alt="Project 1">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Student Portal App</h3>
+                    <p class="project-description">A comprehensive student management system enabling users to view results, timetables, and assignments. Built with React Native and Firebase.</p>
+                    <a href="https://www.linkedin.com/posts/muhammad-qasim-80a7aa28b_expo-reactnative-firebase-activity-7283609189258530817-2MRn?utm_source=share&utm_medium=member_android&rcm=ACoAAEZrNgoBwLLJQjjyMsYIRvnzOat-SqWt9a4" class="project-link">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="d6243d0ffb2fb1874bdca8e16f383757.jpg" alt="Project 2">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Food Delivery App</h3>
+                    <p class="project-description">A user-friendly food ordering platform with real-time tracking and multiple payment options. Developed with React Native and Firestore.</p>
+                    <a href="https://www.linkedin.com/posts/muhammad-qasim-80a7aa28b_reactnative-firebase-appcreation-activity-7293727566648008705-Ynif?utm_source=share&utm_medium=member_android&rcm=ACoAAEZrNgoBwLLJQjjyMsYIRvnzOat-SqWt9a4" class="project-link">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="761137377f58e43f9d8bcec1c57ec1c2.jpg" alt="Project 3">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Expense Tracker App</h3>
+                    <p class="project-description">A personal finance tracker for monitoring expenses, setting budgets, and viewing spending analytics. Created with React Native and Firebase.</p>
+                    <a href="https://www.linkedin.com/posts/muhammad-qasim-80a7aa28b_github-qasim098expo-react-navite-expense-tracker-native-mobile-app-with-firebase-activity-7250036994343362561-ERX_?utm_source=share&utm_medium=member_android&rcm=ACoAAEZrNgoBwLLJQjjyMsYIRvnzOat-SqWt9a4" class="project-link">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</div>
+ <div id="client-reviews">
+    <section class="review-section">
+        <p class="about-p"><span class="h-1">Client</span> Reviews</p>
+        <div class="review-container container">
+            <div class="review-card">
+                <div class="review-content">
+                    <h3 class="review-name">John Doe</h3>
+                    <div class="review-stars">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                    </div>
+                    <p class="review-text">Alphanexs is an exceptional team. They delivered our project on time and exceeded expectations. Highly recommended</p>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-content">
+                    <h3 class="review-name">Jane Smith</h3>
+                    <div class="review-stars">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                    </div>
+                    <p class="review-text">The quality of work is outstanding. The team is professional, reliable, and easy to work with. Will definitely hire again</p>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-content">
+                    <h3 class="review-name">Alex Johnson</h3>
+                    <div class="review-stars">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                    </div>
+                    <p class="review-text">"Great communication and attention to detail. The final product was exactly what we needed. Thank you, Alphanexs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<div id="my-team">
+    <section class="team-section">
+        <p class="about-p"><span class="h-1">Our Team</span></p>
+        <div class="team-container container">
+            <div class="team-card">
+                <div class="team-image">
+                    <img src="d636d53048eccf75fed71e3add231b94-removebg-preview.png" alt="Team Member 1">
+                </div>
+                <div class="team-content">
+                    <h3 class="team-name">Muhammad Qasim</h3>
+                    <p class="team-role">Frontend Developer</p>
+                    <div class="team-socials">
+                        <a href="https://www.linkedin.com/in/muhammad-qasim-80a7aa28b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link">LinkedIn</a>
+                        <a href="https://github.com/qasim098" class="social-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+</div>
+<div id="my-contact">
+    <section class="contact-section">
+        <p class="about-p-c"><span class="h-1">Contact</span> Us</p>
+        <div class="contact-box container-3 grid-1colon">
+            <div class="contact-box-2">
+                <h2 class="h-b-1"> Interested in <br>Working with <br>Alphanexs?</h2>
+                <h6 > Let’s build something amazing together!</h6>
+            </div>
+            <div class="contact-box-1">
+                <a class="head-link-1" href="mailto:alphanexs2@gmail.com?subject=Inquiry%20Regarding%20Your%20Services&body=Dear%20Alphanexs%20Team,%0D%0A%0D%0AI%20recently%20came%20across%20your%20website%20and%20was%20impressed%20by%20the%20services%20you%20offer.%20I%20would%20like%20to%20discuss%20how%20we%20can%20collaborate%20or%20explore%20potential%20projects.%0D%0A%0D%0A%20Looking%20forward%20to%20hearing%20from%20you.%0D%0A%0D%0A%20Best%20Regards," target="_blank">Send Us an Email</a>
+
+                <span class="d-link">
+                    <a class="head-link-3" href="#">Get a Free Consultation</a>
+                </span>
+            </div>
+        </div>
+    </section>
+</div>
+<div>
+    <section class="section-footer">
+        <div class="footer container footer-grid">
+            <div>
+                <h1 class="header-heading-1-f">Alpha<span class="headin-g-f">nexs</span></h1>
+                <p class="footer-text">Welcome to Alphanexs! We specialize in turning ideas into reality through innovative, high-performance digital solutions. Let’s bring your vision to life</p>
+            </div>
+            <div class="Services-footer">
+                <p class="footer-h">Services</p>
+                <p class="footer-t">UI/UX</p>
+                <p class="footer-t">App Development</p>
+                <p class="footer-t">Web Development</p>
+                <p class="footer-t">Web Design</p>
+            </div>
+            <div>
+                <p class="footer-h-2">Quick Link</p>
+                <a class="footer-t-2" href="#my-home">Home</a><br>
+                <a class="footer-t-2" href="#about-me">About</a><br>
+                <a class="footer-t-2" href="#my-services">Services</a><br>
+                <a class="footer-t-2" href="#my-contact">Contact Me</a>
+            </div>
+            <div class="icon-sec">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="footer-icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                </svg>
+                <p class="icon-t">Lahore, Pakistan</p>
+                <br>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="footer-icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                </svg>
+                <p class="icon-t">alphanexs2@gmail.com</p>
+                <br>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="footer-icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 3.75v4.5m0-4.5h-4.5m4.5 0l-6 6m3 12c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 014.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 00-.38 1.21 12.035 12.035 0 007.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 011.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 01-2.25 2.25h-2.25z" />
+                </svg>
+                <p class="icon-t">03191152130</p>
+            </div>
+        </div>
+        <div class="all-rights">
+            <p class="rights-text">© 2025 Alphanexs. All Rights Reserved.</p>
+        </div>
+    </section>
+</div>
+    <script>
+        function toggleNav() {
+            const nav = document.getElementById("headerNav");
+            nav.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
